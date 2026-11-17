@@ -1,0 +1,1490 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "### Monitoring summary  ·  Historical dataset (July 2020)\nValues are from the stored dataset, **not live sensor connectivity**.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.6.11",
+      "title": "A · Monitoring summary",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 4,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true,
+        "text": {
+          "valueSize": 40
+        }
+      },
+      "pluginVersion": "11.6.11",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "sensor_count",
+              "text": "Sensors",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/overview",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Sensors",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 8,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true,
+        "text": {
+          "valueSize": 40
+        }
+      },
+      "pluginVersion": "11.6.11",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "active_alerts",
+              "text": "Active alerts",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/overview",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Active alerts",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#5794F2"
+              }
+            ]
+          },
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#5794F2"
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true,
+        "text": {
+          "valueSize": 40
+        }
+      },
+      "pluginVersion": "11.6.11",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "metric_readings_stored",
+              "text": "Metric readings stored",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/overview",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Metric readings stored",
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 5
+      },
+      "id": 5,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "### Active sensor alerts\nThreshold breaches require investigation; they do **not** confirm a fire or gas leak.\n\nThe table below lists unresolved threshold alerts. When the active alert count is zero, there are no unresolved alerts recorded in the current dataset.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.6.11",
+      "title": "B · Active sensor alerts",
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 6,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "### Sensor availability\nOnline / degraded / offline are measured against the **latest dataset timestamp**, not the current clock.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.6.11",
+      "title": "C · Sensor availability",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "description": "Empty is expected until the production alert engine has written episodes.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Sensor"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 330
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "type": "value",
+                    "options": {
+                      "✓ No unresolved threshold alerts": {
+                        "text": "✓ No unresolved threshold alerts",
+                        "color": "#73BF69",
+                        "index": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-text"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Metric"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 100
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Reading"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 90
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Limit"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 90
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 10
+      },
+      "id": 7,
+      "options": {
+        "cellHeight": "md",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "noDataMessage": "✓ No unresolved threshold alerts"
+      },
+      "pluginVersion": "11.6.11",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "sensor_id",
+              "text": "Sensor",
+              "type": "string"
+            },
+            {
+              "selector": "metric_type",
+              "text": "Metric",
+              "type": "string"
+            },
+            {
+              "selector": "value",
+              "text": "Reading",
+              "type": "number"
+            },
+            {
+              "selector": "threshold",
+              "text": "Limit",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "groq": "*",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/alerts/table",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Unresolved threshold alerts",
+      "type": "table",
+      "transformations": []
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Status"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "type": "value",
+                    "options": {
+                      "online": {
+                        "text": "Online",
+                        "color": "green"
+                      },
+                      "degraded": {
+                        "text": "Degraded",
+                        "color": "orange"
+                      },
+                      "offline": {
+                        "text": "Offline",
+                        "color": "red"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-text"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Behind (min)"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 2
+              },
+              {
+                "id": "unit",
+                "value": "none"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Temp"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 1
+              },
+              {
+                "id": "unit",
+                "value": "celsius"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Humidity"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 1
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Smoke"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 4
+              },
+              {
+                "id": "unit",
+                "value": "none"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Alerts"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "unit",
+                "value": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 8,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.6.11",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "sensor_id",
+              "text": "Sensor",
+              "type": "string"
+            },
+            {
+              "selector": "status",
+              "text": "Status",
+              "type": "string"
+            },
+            {
+              "selector": "last_seen",
+              "text": "Last reading",
+              "type": "timestamp"
+            },
+            {
+              "selector": "behind_minutes",
+              "text": "Behind (min)",
+              "type": "number"
+            },
+            {
+              "selector": "temperature",
+              "text": "Temp",
+              "type": "number"
+            },
+            {
+              "selector": "humidity",
+              "text": "Humidity",
+              "type": "number"
+            },
+            {
+              "selector": "smoke",
+              "text": "Smoke",
+              "type": "number"
+            },
+            {
+              "selector": "alert_count",
+              "text": "Alerts",
+              "type": "number"
+            },
+            {
+              "selector": "details",
+              "text": "Details",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "sensors",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/sensor-status",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Sensor availability and data quality",
+      "type": "table",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "indexByName": {
+              "Sensor": 0,
+              "Status": 1,
+              "Last reading": 2,
+              "Behind (min)": 3,
+              "Temp": 4,
+              "Humidity": 5,
+              "Smoke": 6,
+              "Alerts": 7,
+              "Details": 8
+            },
+            "excludeByName": {},
+            "renameByName": {}
+          }
+        }
+      ]
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 30
+      },
+      "id": 9,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "### Environmental trends · Hourly weighted averages\nFive independent metric charts. Values are historical; charts use the dataset time window.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.6.11",
+      "title": "D · Environmental trends",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 12,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 36,
+        "w": 24,
+        "h": 9
+      },
+      "id": 10,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.6.11",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "time",
+              "text": "Time",
+              "type": "timestamp"
+            },
+            {
+              "selector": "value",
+              "text": "${metric}",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "format": "timeseries",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "points",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/trends?metric=${metric}&limit=500",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Environmental trends · ${metric}",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 45,
+        "w": 24,
+        "h": 7
+      },
+      "id": 15,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "### Interpretation\n- The data are historical, not live telemetry.\n- An empty alert table means **no unresolved alerts are currently stored**, not that the environment is proven safe.\n- Degraded status reflects rejected readings in the stored health records.\n- Smoke, CO and LPG units should be confirmed from the dataset before assigning physical units.\n- A monitoring-coverage warning is distinct from an environmental threshold alert.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.6.11",
+      "title": "Interpretation and limitations",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 5
+      },
+      "id": 16,
+      "options": {
+        "renderTemplate": "every",
+        "content": "<div style=\"width:100%;box-sizing:border-box;padding:4px 8px;color:#DCE1E8;font-size:14px;\">\n<div style=\"display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;text-align:center;\">\n<div><div style=\"color:#AEB5BF;font-size:12px;\">Status</div><div style=\"font-size:14px;text-transform:capitalize;\">{{Status}}</div></div>\n<div><div style=\"color:#AEB5BF;font-size:12px;\">Input</div><div style=\"font-size:14px;\">{{Input}}</div></div>\n<div><div style=\"color:#AEB5BF;font-size:12px;\">Accepted</div><div style=\"font-size:14px;\">{{Accepted}}</div></div>\n<div><div style=\"color:#AEB5BF;font-size:12px;\">Rejected</div><div style=\"font-size:14px;\">{{Rejected}}</div></div>\n</div>\n<div style=\"border-top:1px solid #363B43;margin:10px 0 8px;\"></div>\n<div style=\"text-align:center;font-size:14px;font-weight:500;\">\n{{#if (eq Status \"completed\")}}\n{{#if Rejected}}\n<span style=\"color:#FFCC00;\">⚠ Completed with errors</span>\n{{else}}\n<span style=\"color:#73BF69;\">✓ Completed without errors</span>\n{{/if}}\n{{else}}\n<span style=\"color:#FF9830;\">Batch status: {{Status}}</span>\n{{/if}}\n</div>\n</div>",
+        "defaultContent": "No batch information available",
+        "styles": "",
+        "mode": "html"
+      },
+      "pluginVersion": "11.6.11",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "outcome",
+              "text": "Status",
+              "type": "string"
+            },
+            {
+              "selector": "input_rows",
+              "text": "Input",
+              "type": "number"
+            },
+            {
+              "selector": "accepted_rows",
+              "text": "Accepted",
+              "type": "number"
+            },
+            {
+              "selector": "rejected_rows",
+              "text": "Rejected",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "latest_batch",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/overview",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Latest batch",
+      "type": "marcusolsson-dynamictext-panel",
+      "transparent": false
+    },
+    {
+      "id": 17,
+      "type": "stat",
+      "title": "Online",
+      "gridPos": {
+        "x": 0,
+        "y": 20,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "type": "json",
+          "source": "url",
+          "url": "http://api:8000/api/sensor-status",
+          "url_options": {
+            "method": "GET"
+          },
+          "parser": "backend",
+          "root_selector": "counts",
+          "columns": [
+            {
+              "selector": "online",
+              "text": "Value",
+              "type": "number"
+            }
+          ]
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#73BF69"
+          },
+          "decimals": 0,
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "orientation": "auto",
+        "textMode": "auto",
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "text": {
+          "valueSize": 32
+        }
+      }
+    },
+    {
+      "id": 18,
+      "type": "stat",
+      "title": "Degraded",
+      "gridPos": {
+        "x": 6,
+        "y": 20,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "type": "json",
+          "source": "url",
+          "url": "http://api:8000/api/sensor-status",
+          "url_options": {
+            "method": "GET"
+          },
+          "parser": "backend",
+          "root_selector": "counts",
+          "columns": [
+            {
+              "selector": "degraded",
+              "text": "Value",
+              "type": "number"
+            }
+          ]
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#FF9830"
+          },
+          "decimals": 0,
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "orientation": "auto",
+        "textMode": "auto",
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "text": {
+          "valueSize": 32
+        }
+      }
+    },
+    {
+      "id": 19,
+      "type": "stat",
+      "title": "Offline",
+      "gridPos": {
+        "x": 12,
+        "y": 20,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "type": "json",
+          "source": "url",
+          "url": "http://api:8000/api/sensor-status",
+          "url_options": {
+            "method": "GET"
+          },
+          "parser": "backend",
+          "root_selector": "counts",
+          "columns": [
+            {
+              "selector": "offline",
+              "text": "Value",
+              "type": "number"
+            }
+          ]
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#F2495C"
+          },
+          "decimals": 0,
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "orientation": "auto",
+        "textMode": "auto",
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "text": {
+          "valueSize": 32
+        }
+      }
+    },
+    {
+      "id": 20,
+      "type": "marcusolsson-dynamictext-panel",
+      "title": "Monitoring coverage",
+      "description": "Sensor availability is measured relative to the latest timestamp in the historical dataset, not live connectivity. A coverage warning indicates possible monitoring gaps, not a confirmed environmental hazard.",
+      "gridPos": {
+        "x": 18,
+        "y": 20,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "type": "json",
+          "source": "url",
+          "url": "http://api:8000/api/sensor-status",
+          "url_options": {
+            "method": "GET"
+          },
+          "parser": "backend",
+          "root_selector": "counts",
+          "columns": [
+            {
+              "selector": "degraded",
+              "text": "Degraded",
+              "type": "number"
+            },
+            {
+              "selector": "offline",
+              "text": "Offline",
+              "type": "number"
+            }
+          ]
+        }
+      ],
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "mode": "binary",
+            "binary": {
+              "left": "Degraded",
+              "operator": "+",
+              "right": "Offline"
+            },
+            "alias": "Coverage status",
+            "replaceFields": true
+          }
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "mappings": [
+            {
+              "type": "range",
+              "options": {
+                "from": 0,
+                "to": 0,
+                "result": {
+                  "text": "✓ Monitoring coverage normal",
+                  "color": "green"
+                }
+              }
+            },
+            {
+              "type": "range",
+              "options": {
+                "from": 1,
+                "to": 1000000,
+                "result": {
+                  "text": "⚠ Monitoring coverage warning",
+                  "color": "orange"
+                }
+              }
+            }
+          ],
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "renderTemplate": "all",
+        "content": "\n<div style=\"width:100%; text-align:center; color:#DCE1E8;\">\n  <div style=\"font-size:36px; color:#73BF69; margin-bottom:10px;\">✓</div>\n  <div style=\"font-size:16px; font-weight:600; margin-bottom:8px;\">Monitoring coverage normal</div>\n  <div style=\"font-size:12px; color:#AEB5BF;\">All monitored sensors have recent historical readings.</div>\n</div>\n",
+        "defaultContent": "",
+        "styles": ""
+      }
+    },
+    {
+      "id": 21,
+      "type": "marcusolsson-dynamictext-panel",
+      "title": "Alert status",
+      "description": "Status of unresolved environmental threshold alerts.",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 10
+      },
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "infinity"
+      },
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "active",
+              "text": "Active",
+              "type": "number"
+            },
+            {
+              "selector": "resolved",
+              "text": "Resolved",
+              "type": "number"
+            },
+            {
+              "selector": "total",
+              "text": "Total",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "infinity"
+          },
+          "format": "table",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://api:8000/api/alerts/summary",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "mappings": [
+            {
+              "type": "range",
+              "options": {
+                "from": 0,
+                "to": 0,
+                "result": {
+                  "text": "✓ No active alerts recorded",
+                  "color": "green"
+                }
+              }
+            },
+            {
+              "type": "range",
+              "options": {
+                "from": 1,
+                "to": 1000000,
+                "result": {
+                  "text": "⚠ Active alerts require investigation",
+                  "color": "red"
+                }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "renderTemplate": "everyRow",
+        "content": "\n<div style=\"display:grid; grid-template-columns:repeat(3,1fr); gap:12px; padding:16px; color:#DCE1E8; text-align:center;\">\n  <div>\n    <p style=\"color:#AEB5BF;\">Active</p>\n    <h2>{{Active}}</h2>\n  </div>\n  <div>\n    <p style=\"color:#AEB5BF;\">Resolved</p>\n    <h2>{{Resolved}}</h2>\n  </div>\n  <div>\n    <p style=\"color:#AEB5BF;\">Total</p>\n    <h2>{{Total}}</h2>\n  </div>\n</div>\n\n{{#if Active}}\n  <p style=\"text-align:center; color:#F2495C; font-weight:600;\">\n    ⚠ {{Active}} active threshold alert(s) require investigation\n  </p>\n{{else}}\n  <p style=\"text-align:center; color:#73BF69; font-weight:600;\">\n    ✓ No unresolved threshold alerts\n  </p>\n{{/if}}\n",
+        "defaultContent": "",
+        "styles": ""
+      }
+    },
+    {
+      "id": 30,
+      "title": "",
+      "type": "marcusolsson-dynamictext-panel",
+      "gridPos": {
+        "x": 0,
+        "y": 33,
+        "w": 24,
+        "h": 3
+      },
+      "transparent": false,
+      "options": {
+        "renderTemplate": "all",
+        "content": "<div style=\"display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; padding:12px 8px;\"><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=temperature\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">Temperature</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=humidity\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">Humidity</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=smoke\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">Smoke</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=co\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">CO</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=lpg\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">LPG</a></div>",
+        "defaultContent": "<div style=\"display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; padding:12px 8px;\"><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=temperature\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">Temperature</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=humidity\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">Humidity</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=smoke\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">Smoke</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=co\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">CO</a><a href=\"/d/sensor-monitoring/city-environmental-sensor-monitoring?var-metric=lpg\" style=\"display:inline-block; padding:9px 18px; background:#252A33; color:#DCE1E8; border:1px solid #444B56; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;\">LPG</a></div>",
+        "styles": ""
+      },
+      "targets": [],
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      }
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 41,
+  "tags": [
+    "sensors",
+    "historical",
+    "environment"
+  ],
+  "templating": {
+    "list": [
+      {
+        "name": "metric",
+        "label": "Environmental metric",
+        "type": "custom",
+        "query": "temperature,humidity,smoke,co,lpg",
+        "current": {
+          "selected": true,
+          "text": "Temperature",
+          "value": "temperature"
+        },
+        "options": [
+          {
+            "selected": true,
+            "text": "Temperature",
+            "value": "temperature"
+          },
+          {
+            "selected": false,
+            "text": "Humidity",
+            "value": "humidity"
+          },
+          {
+            "selected": false,
+            "text": "Smoke",
+            "value": "smoke"
+          },
+          {
+            "selected": false,
+            "text": "CO",
+            "value": "co"
+          },
+          {
+            "selected": false,
+            "text": "LPG",
+            "value": "lpg"
+          }
+        ],
+        "multi": false,
+        "includeAll": false,
+        "hide": 2,
+        "skipUrlSync": false
+      }
+    ]
+  },
+  "time": {
+    "from": "2020-07-12T00:00:00.000Z",
+    "to": "2020-07-20T00:03:37.264000Z"
+  },
+  "timepicker": {},
+  "timezone": "utc",
+  "title": "City Environmental Sensor Monitoring",
+  "uid": "sensor-monitoring",
+  "version": 6
+}

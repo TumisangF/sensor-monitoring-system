@@ -1,0 +1,10 @@
+{
+  "description": "Alert limits and plausible ranges per metric. Edit values here; no code change is needed. alert_min/alert_max create an alert when a reading is below/above them. valid_min/valid_max reject physically implausible readings during ingestion (a data-quality check, not an alert). The valid ranges are starting defaults: review them against the sensor datasheets.",
+  "metrics": {
+    "temperature": { "unit": "degC", "alert_min": 0.0,  "alert_max": 35.0, "valid_min": -40.0, "valid_max": 85.0 },
+    "humidity":    { "unit": "%",    "alert_min": 20.0, "alert_max": 85.0, "valid_min": 0.0,   "valid_max": 100.0 },
+    "co":          { "unit": "ppm",  "alert_max": 0.01, "valid_min": 0.0,   "valid_max": 1.0 },
+    "lpg":         { "unit": "ppm",  "alert_max": 0.02, "valid_min": 0.0,   "valid_max": 1.0 },
+    "smoke":       { "unit": "ppm",  "alert_max": 0.05, "valid_min": 0.0,   "valid_max": 1.0 }
+  }
+}
