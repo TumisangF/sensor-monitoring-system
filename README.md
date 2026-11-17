@@ -1,6 +1,6 @@
 # City Environmental Sensor Monitoring System
 
-**An IoT-based environmental monitoring and early-warning prototype for municipal safety operations.**
+An IoT-based environmental monitoring and early-warning prototype for municipal safety operations.
 
 This project implements a containerised environmental monitoring system that processes IoT sensor telemetry, detects threshold breaches, maintains historical records, and provides an interactive Grafana dashboard for monitoring and investigation.
 
@@ -8,7 +8,17 @@ The system combines Python-based data ingestion, MongoDB storage, a FastAPI back
 
 The objective is to support the early identification of potentially hazardous environmental conditions while providing reliable access to historical sensor information.
 
-**Repository:** https://github.com/TumisangF/sensor-monitoring-system
+System Dashboard
+
+### System Dashboard
+
+![City Environmental Sensor Monitoring Dashboard](./docs/screenshots/sensor-trends.png)
+
+Figure 1. Grafana dashboard showing historical monitoring statistics, threshold alerts, sensor availability, and ingestion status.
+
+Additional application screenshots, including environmental trends and FastAPI operator-action endpoints, are available in the screenshots directory.
+
+Repository: https://github.com/TumisangF/sensor-monitoring-system
 
 ## 1. Project Overview
 
@@ -490,6 +500,7 @@ When no unresolved alerts are present, the dashboard provides a visual confirmat
 The sensor-status API calculates availability relative to the latest stored reading.
 
 This distinction prevents historical observations from being presented as evidence of current physical sensor connectivity.
+
 
 ## 10. Reliability and Fault Handling
 
